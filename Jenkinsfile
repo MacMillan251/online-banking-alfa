@@ -47,7 +47,7 @@ pipeline {
                 sh 'docker run --detach --name=bankmysql -v /var/lib/mysql:/var/lib/mysql --env="MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}" -p 3306:3306 mysql:5.7.22'
                 sh 'sleep 20'
             //  sh 'docker exec -i bankmysql mysql -uroot -proot < sql_dump/onlinebanking.sql'
-                sh 'docker exec -i bankmysql mysql -uroot -p${MYSQL_ROOT_PASSWORD} < sql_dump/onlinebanking.sql'
+            //  sh 'docker exec -i bankmysql mysql -uroot -p${MYSQL_ROOT_PASSWORD} < sql_dump/onlinebanking.sql'
             }
         }
         stage('Deploy and Run') {
