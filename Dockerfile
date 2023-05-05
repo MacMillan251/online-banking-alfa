@@ -1,5 +1,5 @@
 #FROM openjdk
-FROM maven
+FROM maven:3.6.3-openjdk-14
 
 ## Install maven
 #RUN apt-get update
