@@ -8,7 +8,7 @@
         <div class="col-md-6">
             <form th:action="@{/transfer/betweenAccounts}" method="post">
                 <div class="form-group" >
-                    <label for="transferFrom">1. Please select the account you would like to transfer From:</label>
+                    <label for="transferFrom">Принять перевод с:</label>
                     <select class="form-control" th:value="${transferFrom}" name="transferFrom" id="transferFrom" required="required">
                         <option  disabled="disabled" selected="selected"> -- select your account -- </option>
                         <option value="Primary">Primary</option>
@@ -18,17 +18,17 @@
                 </div>
 
                 <div class="form-group" >
-                    <label for="transferTo">2. Please select the account you would like to transfer To:</label>
+                    <label for="transferTo">Отправить перевод на:</label>
                     <select class="form-control" th:value="${transferTo}" name="transferTo" id="transferTo" required="required">
                         <option  disabled="disabled" selected="selected"> -- select your account -- </option>
-                        <option value="Primary">Primary</option>
-                        <option value="Savings">Savings</option>
+                        <option value="Primary">Основной счёт</option>
+                        <option value="Savings">Накопительный счёт</option>
                     </select>
                     <br />
                 </div>
 
                 <div class="form-group">
-                    <label>3. Please specify the amount you would like to transfer: </label>
+                    <label>Сумма: </label>
                     <span class="input-group-addon">Amount $</span>
                     <input th:value="${amount}" type="text" name="amount" id="amount" class="form-control" aria-label="Amount (to the nearest dollar)"/>
                 </div>

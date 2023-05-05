@@ -38,7 +38,7 @@ html {
 	color: #4c565e;
 	font-size: 24px;
 	padding: 0 10px 15px;
-	border-bottom: 2px solid #6caee0;
+	border-bottom: 2px solid #e06c6c;
 	margin: 0;
 }
 
@@ -114,7 +114,7 @@ html {
 .form-basic button {
 	display: block;
 	border-radius: 2px;
-	background-color: #6caee0;
+	background-color: #de3c3c;
 	color: #ffffff;
 	font-weight: bold;
 	box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -173,9 +173,9 @@ html {
 	width: 100%;
 	overflow: hidden;
 	background: #FFF;
-	color: #024457;
+	color: #570202;
 	border-radius: 10px;
-	border: 1px solid #167F92;
+	border: 1px solid #921616;
 }
 
 .responstable tr {
@@ -189,7 +189,7 @@ html {
 .responstable th {
 	display: none;
 	border: 1px solid #FFF;
-	background-color: #167F92;
+	background-color: #921616;
 	color: #FFF;
 	padding: 1em;
 }
@@ -253,7 +253,7 @@ html {
 body {
 	padding: 0 2em;
 	font-family: Arial, sans-serif;
-	color: #024457;
+	color: #733838;
 	/*background: #f2f2f2;*/
 }
 
@@ -264,7 +264,7 @@ h1 {
 }
 
 h1 span {
-	color: #167F92;
+	color: #921616;
 }
 
 .box {

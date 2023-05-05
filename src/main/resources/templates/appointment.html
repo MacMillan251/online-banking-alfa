@@ -6,12 +6,12 @@
 <div class="container main">
     <div class="row">
         <div class="col-md-6">
-            <h3>Schedule An Appointment</h3>
+            <h3>Назначить визит</h3>
             <form th:action="@{/appointment/create}" method="post" id="appointmentForm">
                 <input type="hidden" name="id" th:value="${appointment.id}"/>
 
                 <div class="form-group">
-                    <label for="dateString">Pick a Date and Time:</label>
+                    <label for="dateString">Время:</label>
                     <div class="input-append date form_datetime input-group" data-date="2017-01-20T15:25:00Z">
                         <input class="form-control" type="text" value="" readonly="readonly"
                                th:value="${dateString}" name="dateString"
@@ -22,14 +22,14 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="location">Pick a location:</label>
+                    <label for="location">Отделение:</label>
                     <select class="form-control" th:value="${appointment.location}" name="location" id="location"
                             >
-                        <option disabled="disabled" selected="selected" > -- select the location --</option>
-                        <option>Helsinki</option>
-                        <option>Turku</option>
-                        <option>Tampere</option>
-                        <option>Oulu</option>
+                        <option disabled="disabled" selected="selected" > -- выбрать --</option>
+                        <option>Каланчёвская 27</option>
+                        <option>Проспект Андропова 18к5</option>
+                        <option>Земляной Вал 41</option>
+                        <option>Неглинная 10</option>
                     </select>
                 </div>
 

@@ -46,10 +46,10 @@ $(document).ready(function() {
             message: "Do you really want to schedule this appointment?",
             buttons: {
                 cancel: {
-                    label: "<i class="fa fa-times"></i> Cancel"
+                    label: "<i class="fa fa-times"></i> Отмена"
                 },
                 confirm: {
-                    label: "<i class="fa fa-check"></i> Confirm"
+                    label: "<i class="fa fa-check"></i> Подтвердить"
                 }
             },
             callback: function (result) {
