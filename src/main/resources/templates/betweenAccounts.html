@@ -8,9 +8,9 @@
         <div class="col-md-6">
             <form th:action="@{/transfer/betweenAccounts}" method="post">
                 <div class="form-group" >
-                    <label for="transferFrom">Принять перевод с:</label>
+                    <label for="transferFrom">Счёт списания</label>
                     <select class="form-control" th:value="${transferFrom}" name="transferFrom" id="transferFrom" required="required">
-                        <option  disabled="disabled" selected="selected"> -- select your account -- </option>
+                        <option  disabled="disabled" selected="selected"> -- выбрать счет -- </option>
                         <option value="Primary">Primary</option>
                         <option value="Savings">Savings</option>
                     </select>
@@ -18,9 +18,9 @@
                 </div>
 
                 <div class="form-group" >
-                    <label for="transferTo">Отправить перевод на:</label>
+                    <label for="transferTo">Счёт начисления</label>
                     <select class="form-control" th:value="${transferTo}" name="transferTo" id="transferTo" required="required">
-                        <option  disabled="disabled" selected="selected"> -- select your account -- </option>
+                        <option  disabled="disabled" selected="selected"> -- выбрать счёт -- </option>
                         <option value="Primary">Основной счёт</option>
                         <option value="Savings">Накопительный счёт</option>
                     </select>
@@ -28,8 +28,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Сумма: </label>
-                    <span class="input-group-addon">Amount $</span>
+                    <label> </label>
+                    <span class="input-group-addon">Сумма (в рублях)</span>
                     <input th:value="${amount}" type="text" name="amount" id="amount" class="form-control" aria-label="Amount (to the nearest dollar)"/>
                 </div>
 
@@ -37,7 +37,7 @@
                        name="${_csrf.parameterName}"
                        value="${_csrf.token}"/>
 
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Transfer</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Подтвердить перевод</button>
             </form>
 
             <div class="col-md-6">

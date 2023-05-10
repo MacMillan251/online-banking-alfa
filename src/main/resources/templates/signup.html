@@ -7,7 +7,7 @@
     <div class="row main">
         <div class="panel-heading">
             <div class="panel-title text-center">
-                <h1 class="title">Sign Up</h1>
+                <h1 class="title">Регистрация</h1>
                 <hr />
             </div>
         </div>
@@ -15,65 +15,65 @@
             <form class="form-horizontal" method="post" th:action="@{/signup}">
 
                 <div class="form-group">
-                    <label for="firstName" class="cols-sm-2 control-label">First Name</label>
+                    <label for="firstName" class="cols-sm-2 control-label">Имя</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" th:value="${user.firstName}" id="firstName" name="firstName" roleId="firstname"  placeholder="Enter your first name" required="required"/>
+                            <input type="text" class="form-control" th:value="${user.firstName}" id="firstName" name="firstName" roleId="firstname"  placeholder="Имя" required="required"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="lastName" class="cols-sm-2 control-label">Last Name</label>
+                    <label for="lastName" class="cols-sm-2 control-label">Фамилия</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" th:value="${user.lastName}" id="lastName" name="lastName" roleId="lastName"  placeholder="Enter your last name" required="required"/>
+                            <input type="text" class="form-control" th:value="${user.lastName}" id="lastName" name="lastName" roleId="lastName"  placeholder="Фамилия" required="required"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="phone" class="cols-sm-2 control-label">Phone</label>
+                    <label for="phone" class="cols-sm-2 control-label">Номер телефона</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" th:value="${user.phone}" id="phone" name="phone" roleId="phone"  placeholder="xxx-xxx-xxxx" required="required"/>
+                            <input type="text" class="form-control" th:value="${user.phone}" id="phone" name="phone" roleId="phone"  placeholder="945-123-45-67" required="required"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Your Email</label><span class="bg-danger pull-right" th:if="${emailExists}">Email already exists</span>
+                    <label for="email" class="cols-sm-2 control-label">Электронный адрес</label><span class="bg-danger pull-right" th:if="${emailExists}">Email already exists</span>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" th:value="${user.email}" id="email" name="email" roleId="email"  placeholder="Enter your Email" required="required"/>
+                            <input type="text" class="form-control" th:value="${user.email}" id="email" name="email" roleId="email"  placeholder="Электронный адрес" required="required"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="username" class="cols-sm-2 control-label">Username</label><span class="bg-danger pull-right" th:if="${usernameExists}">Username already exists</span>
+                    <label for="username" class="cols-sm-2 control-label">Логин</label><span class="bg-danger pull-right" th:if="${usernameExists}">Username already exists</span>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" th:value="${user.username}" id="username" name="username" roleId="username"  placeholder="Enter your Username" required="required"/>
+                            <input type="text" class="form-control" th:value="${user.username}" id="username" name="username" roleId="username"  placeholder="Логин на латинице" required="required"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="password" class="cols-sm-2 control-label">Password</label>
+                    <label for="password" class="cols-sm-2 control-label">Пароль</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" class="form-control" th:value="${user.password}" id="password" name="password" roleId="password"  placeholder="Enter your Password" required="required"/>
+                            <input type="password" class="form-control" th:value="${user.password}" id="password" name="password" roleId="password"  placeholder="От 8-ми символов" required="required"/>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input id="showPassword" type="checkbox" />Show Password
+                                <input id="showPassword" type="checkbox" />Показать пароль
                             </label>
                         </div>
                     </div>
@@ -90,13 +90,13 @@
                 <!--</div>-->
 
                 <div class="form-group ">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Sign up!</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Продолжить</button>
                 </div>
                 
                 <hr />
                 
 				<div class="form-group ">
-                    <a  class="btn btn-info btn-lg btn-block login-button" th:href="@{/}">Cancel</a>
+                    <a  class="btn btn-info btn-lg btn-block login-button" th:href="@{/}">Отмена</a>
                 </div>
             </form>
         </div>

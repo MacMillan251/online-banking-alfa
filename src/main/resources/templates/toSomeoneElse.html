@@ -8,7 +8,7 @@
         <div class="col-md-6">
             <form th:action="@{/transfer/toSomeoneElse}" method="post">
                 <div class="form-group" >
-                    <label for="recipientName">1. Please choose the recipient:</label>
+                    <label for="recipientName">Получатель</label>
                     <select class="form-control" th:value="${recipientName}"  name="recipientName" id="recipientName" required="required">
                         <option disabled="disabled" selected="selected"> -- select the recipient -- </option>
                         <option data-th-each="eachRecipient : ${recipientList}" data-th-text="${eachRecipient.name}"></option>
@@ -17,9 +17,9 @@
                 </div>
 
                 <div class="form-group" >
-                    <label for="accountType">2. Please select the account you would like to transfer from:</label>
+                    <label for="accountType">Счёт списания</label>
                     <select class="form-control" th:value="${accountType}" name="accountType" id="accountType" required="required">
-                        <option disabled="disabled" selected="selected"> -- select your account -- </option>
+                        <option disabled="disabled" selected="selected"> -- выбрать счёт -- </option>
                         <option>Primary</option>
                         <option>Savings</option>
                     </select>
@@ -27,8 +27,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label>3. Please specify the amount you would like to transfer: </label>
-                    <span class="input-group-addon">Amount $</span>
+                    <label> </label>
+                    <span class="input-group-addon">Сумма (в рублях)</span>
                     <input th:value="${amount}" type="text" name="amount" id="amount" class="form-control" aria-label="Amount (to the nearest dollar)"/>
                 </div>
 

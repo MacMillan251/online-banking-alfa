@@ -6,37 +6,37 @@
 <div class="container">
     <div class="row main">
         <div class="col-md-6">
-            <h2 class="title">My Profile</h2>
+            <h2 class="title">Информация об аккаунте</h2>
             <hr/>
             <form method="post" th:action="@{/user/profile}">
                 <input type="hidden" name="id" th:value="${user.userId}"/>
 
                 <div class="form-group">
-                    <label for="firstName">First Name</label>
+                    <label for="firstName">Имя</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                             <input type="text" class="form-control" th:value="${user.firstName}" id="firstName"
-                                   name="firstName" roleId="firstname" placeholder="Enter your first name"
+                                   name="firstName" roleId="firstname" placeholder="Имя"
                                    required="required"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="lastName" class="cols-sm-2 control-label">Last Name</label>
+                    <label for="lastName" class="cols-sm-2 control-label">Фамилия</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                             <input type="text" class="form-control" th:value="${user.lastName}" id="lastName"
-                                   name="lastName" roleId="lastName" placeholder="Enter your last name"
+                                   name="lastName" roleId="lastName" placeholder="Фамилия"
                                    required="required"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="phone" class="cols-sm-2 control-label">Phone</label>
+                    <label for="phone" class="cols-sm-2 control-label">Номер телефона</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
@@ -47,26 +47,26 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Your Email</label><span
-                        class="bg-danger pull-right" th:if="${emailExists}">Email already exists</span>
+                    <label for="email" class="cols-sm-2 control-label">Почтовый адрес</label><span
+                        class="bg-danger pull-right" th:if="${emailExists}">Уже существует</span>
                     <div class="cols-sm-10">
                         <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-envelope fa"
                                                                    aria-hidden="true"></i></span>
                             <input type="text" class="form-control" th:value="${user.email}" id="email" name="email"
-                                   roleId="email" placeholder="Enter your Email" required="required"/>
+                                   roleId="email" placeholder="Почтовый адрес" required="required"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="username" class="cols-sm-2 control-label">Username</label><span
-                        class="bg-danger pull-right" th:if="${usernameExists}">Username already exists</span>
+                    <label for="username" class="cols-sm-2 control-label">Фамилия</label><span
+                        class="bg-danger pull-right" th:if="${usernameExists}">Уже существует</span>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
                             <input type="text" class="form-control" th:value="${user.username}" id="username"
-                                   name="username" roleId="username" placeholder="Enter your Username"
+                                   name="username" roleId="username" placeholder="Фамилия"
                                    required="required"/>
                         </div>
                     </div>
@@ -82,13 +82,13 @@
         <div class="col-md-6">
             <div class="panel-heading">
                 <div class="panel-title text-center">
-                    <h1 class="title">Your Account Information</h1>
+                    <h1 class="title">Номера счетов</h1>
                     <hr/>
                 </div>
                 <table class="responstable">
                     <tr>
-                        <th>Primary Account Number</th>
-                        <th>Savings Account Number</th>
+                        <th>Основной счёт</th>
+                        <th>Накопительный счёт</th>
                     </tr>
 
                     <tr>

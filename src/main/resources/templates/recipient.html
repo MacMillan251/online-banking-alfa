@@ -6,41 +6,41 @@
 <div class="container main">
     <div class="row">
         <div class="col-md-6">
-            <h3>Recipient Information</h3>
+            <h3>Добавить получателя</h3>
             <form th:action="@{/transfer/recipient/save}" method="post">
                 <input type="hidden" name="id" th:value="${recipient.id}" />
 
                 <div class="form-group">
-                    <label for="recipientName">Name</label>
+                    <label for="recipientName">Имя</label>
                     <input type="text" class="form-control" th:value="${recipient.name}" name="name"
-                           id="recipientName" placeholder="Name"/>
+                           id="recipientName" placeholder="Имя"/>
                 </div>
                 <div class="form-group">
-                    <label for="recipientEmail">Email</label>
+                    <label for="recipientEmail">Электронный адрес</label>
                     <input type="email" class="form-control" th:value="${recipient.email}" name="email"
-                           id="recipientEmail" placeholder="Email"/>
+                           id="recipientEmail" placeholder="Электронный адрес"/>
                 </div>
                 <div class="form-group">
-                    <label for="recipientPhone">Phone</label>
+                    <label for="recipientPhone">Телефонный номер</label>
                     <input type="text" class="form-control" th:value="${recipient.phone}" name="phone"
-                           id="recipientPhone" placeholder="Phone"/>
+                           id="recipientPhone" placeholder="945-123-45-67"/>
                 </div>
                 <div class="form-group">
-                    <label for="recipientAccountNumber">Account Number</label>
+                    <label for="recipientAccountNumber">Номер счёта</label>
                     <input type="text" class="form-control" th:value="${recipient.accountNumber}"
-                           name="accountNumber" id="recipientAccountNumber" placeholder="Account Number"/>
+                           name="accountNumber" id="recipientAccountNumber" placeholder="Номер"/>
                 </div>
                 <div class="form-group">
-                    <label for="recipientDescription">Description</label>
+                    <label for="recipientDescription">Комментарий</label>
                     <textarea class="form-control" th:value="${recipient.description}" name="description"
-                              id="recipientDescription" placeholder="Description" th:text="${recipient.description}"></textarea>
+                              id="recipientDescription" placeholder="Комментарий" th:text="${recipient.description}"></textarea>
                 </div>
 
                 <input type="hidden"
                        name="${_csrf.parameterName}"
                        value="${_csrf.token}"/>
 
-                <button class="btn btn-primary" type="submit">Add/Edit Recipient</button>
+                <button class="btn btn-primary" type="submit">Добавить/изменить получателя</button>
             </form>
 
             <div class="col-md-6">
@@ -49,16 +49,16 @@
     </div>
     <br/>
     <div class="row">
-        <h3>List of Recipients</h3>
+        <h3>Известные получатели</h3>
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>Recipient Name</th>
-                    <th>Recipient Email</th>
-                    <th>Recipient Phone</th>
-                    <th>Recipient Account Number</th>
-                    <th>Description</th>
+                    <th>Имя</th>
+                    <th>EMail</th>
+                    <th>Телефон</th>
+                    <th>Номер счёта</th>
+                    <th>Комментарий</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -69,7 +69,7 @@
                     <td data-th-text="${eachRecipient.phone}">...</td>
                     <td data-th-text="${eachRecipient.accountNumber}">...</td>
                     <td data-th-text="${eachRecipient.description}">...</td>
-                    <td><a th:href="@{/transfer/recipient/delete?recipientName=}+${eachRecipient.name}">delete</a></td>
+                    <td><a th:href="@{/transfer/recipient/delete?recipientName=}+${eachRecipient.name}">Удалить</a></td>
                 </tr>
                 </tbody>
             </table>

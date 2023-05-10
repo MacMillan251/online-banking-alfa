@@ -43,7 +43,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" th:href="@{/userFront}">Home</a>
+            <a class="navbar-brand page-scroll" th:href="@{/userFront}">На главную</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,36 +54,36 @@
                     <a class="page-scroll" href="#page-top"></a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accounts <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Счета <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a th:href="@{/account/primaryAccount}">Primary</a></li>
+                        <li><a th:href="@{/account/primaryAccount}">Основной счёт</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a th:href="@{/account/savingsAccount}">Savings</a></li>
+                        <li><a th:href="@{/account/savingsAccount}">Накопительный счёт</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Transfer <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Перевод <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a th:href="@{/transfer/betweenAccounts}">Between Accounts</a></li>
-                        <li><a th:href="@{/transfer/toSomeoneElse}">To Someone Else</a></li>
+                        <li><a th:href="@{/transfer/betweenAccounts}">Между счетами</a></li>
+                        <li><a th:href="@{/transfer/toSomeoneElse}">Другому клиенту</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a th:href="@{/transfer/recipient}">Add/Edit Recipient</a></li>
+                        <li><a th:href="@{/transfer/recipient}">Изменить получателей</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Appointment <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Визит в банк <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a th:href="@{/appointment/create}">Schedule an Appointment</a></li>
+                        <li><a th:href="@{/appointment/create}">Назначить визит</a></li>
                     </ul>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Me <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Профиль <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a th:href="@{/user/profile}">Profile</a></li>
+                        <li><a th:href="@{/user/profile}">Настройки</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a th:href="@{/logout}">Logout</a></li>
+                        <li><a th:href="@{/logout}">Выход</a></li>
                     </ul>
                 </li>
             </ul>
